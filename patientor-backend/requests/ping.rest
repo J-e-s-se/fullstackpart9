@@ -1,0 +1,54 @@
+GET http://localhost:3001/api/patients/d2773822-f723-11e9-8f0b-362b9e155667
+
+###
+POST http://localhost:3001/api/patients
+Content-Type: application/json
+
+{
+  "name": "John Snow",
+  "dateOfBirth": "1999-08-12",
+  "ssn": "028386-183X",
+  "gender": "female",
+  "occupation": "Professional Footballer"
+}
+
+###
+POST http://localhost:3001/api/patients/d2773822-f723-11e9-8f0b-362b9e155667/entries
+Content-Type: application/json
+
+{
+  "date": "2020-10-22",
+  "specialist": "MD School",
+  "type": "HealthCheck",
+  "description": "Prescriptions are not renewed",
+  "diagnosisCodes": ["S62.5"],
+  "healthCheckRating": 3
+}
+
+
+###
+POST http://localhost:3001/api/patients/d2773822-f723-11e9-8f0b-362b9e155667/entries
+Content-Type: application/json
+
+{
+  "date": "2015-05-20",
+  "specialist": "Federal Medical Center",
+  "type": "Hospital",
+  "description": "Broke his knee",
+  "diagnosisCodes": ["S62.5"],
+  "discharge": {
+    "date": "2022-02-18",
+    "criteria": "Knee was healed"
+  }
+}
+###
+POST http://localhost:3001/api/patients
+Content-Type: application/json
+
+{
+  "name": "Beast Man",
+  "dateOfBirth": "1980-11-02",
+  "ssn": "892586-183X",
+  "gender": "male",
+  "occupation": "Professional Footballer"
+}
